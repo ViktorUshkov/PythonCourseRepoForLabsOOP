@@ -36,10 +36,10 @@ class Book:
         """
         return self._author
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"Книга '{self.name}'. Автор {self.author}"
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"{self.__class__.__name__}(name={self.name!r}, author={self.author!r})"
 
 
@@ -89,7 +89,7 @@ class PaperBook(Book):
     
     Метод __repr__ следует перегрузить, с учетом добавления атрибута pages
     """
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"{self.__class__.__name__}(name={self.name!r}, author={self.author!r}, pages={self.pages})"
 
 
@@ -139,7 +139,7 @@ class AudioBook(Book):
     
     Метод __repr__ следует перегрузить, с учетом добавления атрибута duration
     """
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"{self.__class__.__name__}(name={self.name!r}, author={self.author!r}, duration={self.duration})"
 
 
